@@ -11,12 +11,11 @@ class DefaultSider extends React.Component {
     this.state = {
       collapsed: false,
     };
-    this.toggleSider = this.toggleSider.bind(this);
   }
 
-  toggleSider() {
+  toggleSider = () => {
     this.setState({ collapsed: !this.state.collapsed });
-  }
+  };
 
   render() {
     const { collapsed } = this.state;
