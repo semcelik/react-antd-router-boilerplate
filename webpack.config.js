@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   module: {
@@ -33,6 +34,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [{ loader: 'file-loader', options: {} }],
+      },
     ],
   },
   plugins: [
@@ -40,10 +45,12 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
     historyApiFallback: true,
     port: 3000,
     inline: true,
+    hot: true,
   },
 };
