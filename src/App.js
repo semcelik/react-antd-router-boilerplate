@@ -7,14 +7,12 @@ import createBrowserHistory from 'history/createBrowserHistory';
 
 const history = createBrowserHistory();
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router history={history}>
-        <DefaultLayout />
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <Router history={history}>
+      <DefaultLayout />
+    </Router>
+  );
 }
 
 export default App;
