@@ -47,6 +47,7 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
+  devtool: 'source-map',
   devServer: {
     historyApiFallback: true,
     port: 3000,
