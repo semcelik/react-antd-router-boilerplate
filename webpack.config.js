@@ -2,6 +2,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+  //polyfill required for using async-await
+  entry: ['babel-polyfill', './src/index.js'],
   module: {
     rules: [
       {
