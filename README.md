@@ -35,3 +35,9 @@ npm start
 ```
 
 and it will run at `http://localhost:3000`
+
+
+## Deploying on Heroku
+To deploy your app in heroku, you can follow this steps;
+https://gist.github.com/semcelik/669fd89840256e72a541ce3009a0dfa1
+
